@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" 
+    xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="jpaProject">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        
+        <mapping-file>META-INF/consultas.xml</mapping-file>
+        
+        <class>Produto</class>
+        <class>basic.model.onetoone.Assento</class>
+        <class>basic.model.onetoone.Cliente</class>
+        <class>basic.model.onetomany.Professor</class>
+        <class>basic.model.onetomany.Materias</class>
+        <class>basic.model.onetomany.University</class>
+        <class>basic.model.onetomany.Student</class>
+   		<class>basic.model.manytomany.Sobrinho</class>
+   		<class>basic.model.manytomany.Tio</class>
+   		<class>basic.model.manytomany.Filme</class>
+   		<class>basic.model.manytomany.Ator</class>
+   		<class>basic.model.composicao.Endereco</class>
+		<class>basic.model.composicao.Fornecedor</class>
+		<class>basic.model.composicao.Funcionario</class>
+        
+        <properties>
+            <property name="javax.persistence.jdbc.driver"
+                value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url"
+                value="jdbc:mysql://localhost/curso_java"/>
+            <property name="javax.persistence.jdbc.user"
+                value="root"/>
+            <property name="javax.persistence.jdbc.password"
+                value="06031998Rr@"/>
+            
+            <property name="hibernate.dialect"
+                value="org.hibernate.dialect.MySQL57Dialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+        </properties>
+    </persistence-unit>
+</persistence>
