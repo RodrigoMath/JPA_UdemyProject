@@ -28,7 +28,7 @@ public class SobrinhoTio {
 		Sobrinho s3= new Sobrinho();
 		s3.setNome("Larissa");
 		s3.setTio(Arrays.asList(t5,t3));
-	
+		
 		t1.setSobrinho(Arrays.asList(s1));
 		t2.setSobrinho(Arrays.asList(s1,s2));
 		t3.setSobrinho(Arrays.asList(s1,s3));
